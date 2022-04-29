@@ -1,0 +1,38 @@
+[
+    {
+      "precio": 2000,
+      "id": 1,
+      "title": "EFT",
+      "imgCurso": "img/capacitacion1.webp"
+    },
+    {
+      "precio": 2300,
+      "id": 2,
+      "title": "Tu eres la medicina",
+      "imgCurso": "img/capacitacion2.webp"
+    },
+    {
+      "precio": 3100,
+      "id": 3,
+      "title": "Emociones Transgeneracionales",
+      "imgCurso": "img/capacitacion3.webp"
+    },
+    {
+      "precio": 2550,
+      "id": 4,
+      "title": "Emociones Atrapadas",
+      "imgCurso": "img/capacitacion4.webp"
+    },
+    {
+      "precio": 4100,
+      "id": 5,
+      "title": "Bloqueos Energéticos",
+      "imgCurso": "img/capacitacion5.webp"
+    },
+    {
+      "precio": 3150,
+      "id": 6,
+      "title": "El perdón",
+      "imgCurso": "img/capacitacion6.webp"
+    }
+  ]
