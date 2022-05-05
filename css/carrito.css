@@ -32,6 +32,24 @@ header .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
   color: white;
 }
 
+/* ========================================== */
+/*                   CONTENIDO                */
+/* ========================================== */
+
+.alert{
+  z-index: 100;
+  grid-area: alert;
+  position: sticky;   
+  top: 0;
+}
+
+.hide, .remove{
+  display: none;
+  /* position: sticky; */
+  /* top: 110; */
+}
+
+
 .contenedorCapacitaciones {
   width: 100%;
   display: grid;
@@ -40,7 +58,8 @@ header .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
   grid-template-areas:
     "header			       header   	         header"
     "zona1             zona1               zona1"
-    "contenidoCursos   contenidoCursos     contenidoCursos"
+    "alert              alert               alert"
+    "container         container           tabla"
     "footer	 		       footer 		         footer";
 }
 
@@ -59,68 +78,18 @@ header .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
   padding: 0.9375rem;
 }
 
-#app {
-  grid-area: contenidoCursos;
-  width: 70%;
-  margin: auto;
-}
-#store-container {
-  /* grid-area: contenidoCursos; */
-  padding: 20px;
-  display: flex;
-  gap: 10px;
+
+.container{
+  grid-area: container;
 }
 
-#store-container .item {
-  border: solid 1px #ccc;
-  border-radius: 5px;
-  padding: 20px;
+
+
+.table{
+  grid-area: tabla;
 }
 
-#shopping-cart-container {
-  position: absolute;
-  background-color: white;
-  right: 0;
-  width: 300px;
-  border: solid 1px #ccc;
-  padding: 10px;
-}
 
-.show {
-  display: block;
-}
-
-.hide {
-  display: none;
-}
-
-.item .titulo {
-  font-weight: bold;
-}
-
-.item .precio {
-  color: green;
-  font-weight: bold;
-}
-
-.item div {
-  padding: 5px 0;
-}
-
-.total {
-  padding: 10px 0;
-  font-weight: bold;
-  font-style: 20px;
-}
-
-button {
-  border: none;
-  color: white;
-  background-color: #0c550c;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
 /*-- ========================================= --*/
 /*--                   FOOTER                  --*/
@@ -143,5 +112,6 @@ footer #iconos a .bi {
   font-size: 1.625rem;
   padding: 0 8px;
   color: darkgreen;
-  
 }
+
+
