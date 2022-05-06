@@ -94,10 +94,16 @@
       <!--               INTRO                       -->
       <!-- ========================================= -->
 
-      <div class="alert alert-success containerAlert position-sticky top-0 hide" role="alert">
+      <div
+        class="alert alert-success containerAlert position-sticky top-0 hide"
+        role="alert"
+      >
         Capacitación añadida al carrito!
       </div>
-      <div class="alert alert-danger containerAlert position-sticky top-0 remove" role="alert">
+      <div
+        class="alert alert-danger containerAlert position-sticky top-0 remove"
+        role="alert"
+      >
         Capacitación eliminada del carrito
       </div>
 
@@ -147,7 +153,7 @@
         </tr>
       </template>
 
-      <table class="table">
+      <table class="table" id="table">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -176,8 +182,6 @@
         <td class="font-weight-bold">$ <span>5000</span></td>
       </template>
 
-     
-
       <!-- ========================================= -->
       <!--                 FOOTER                    -->
       <!-- ========================================= -->
@@ -200,6 +204,10 @@
       </footer>
     </div>
 
-    <script src="mains.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/sweetAlert.js"></script>
   </body>
 </html>

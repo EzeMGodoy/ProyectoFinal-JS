@@ -5,6 +5,10 @@ const templateCard = document.getElementById("template-card").content; //! .cont
 const templateFooter = document.getElementById("template-footer").content;
 const templateCarrito = document.getElementById("template-carrito").content;
 
+const tabla = document.getElementById("table");
+
+
+
 const fragment = document.createDocumentFragment(); //! no genera reflow, memoria volatil, se va
 
 let carrito = {};
@@ -45,8 +49,13 @@ const pintarCards = (data) => {
 
     const clone = templateCard.cloneNode(true); //Tengo el clon y lo paso al fragment
     fragment.appendChild(clone);
+    
+    
   });
+  
   cards.appendChild(fragment); // aca pinto todas las cards. Evito el reflow gracias al fragment
+
+  
 };
 
 const addCarrito = (e) => {
@@ -55,6 +64,11 @@ const addCarrito = (e) => {
     setCarrito(e.target.parentElement); //*Accedo al padre del target(boton), o sea al div card-body. Ver dsp de agregar el div de img
 
     const alert = document.querySelector(".alert");
+
+    Swal.fire({
+      text: "Producto añadido",
+      icon: "success"
+    });
 
     setTimeout(function () {
       //! Alert de producto añadido
@@ -77,7 +91,7 @@ const setCarrito = (objeto) => {
   };
 
   if (carrito.hasOwnProperty(producto.id)) {
-    //si existe queire decir que el producto se está duplicando por lo tanto agregar 1 mas
+    //*si existe queire decir que el producto se está duplicando por lo tanto agregar 1 mas
     producto.cantidad = carrito[producto.id].cantidad + 1;
   }
 
@@ -85,7 +99,10 @@ const setCarrito = (objeto) => {
   pintarCarrito();
 };
 
+
+
 const pintarCarrito = () => {
+  
   items.innerHTML = ""; //* Gracias a esto no repito la lista. Probar que pasa si lo comento o borro ;)
   Object.values(carrito).forEach((producto) => {
     //! Uso Object.values, porque al ser un objeto NO le puedo pasar metodos de arrays. Con esta propiedad si.
@@ -161,4 +178,31 @@ const btnAccion = (e) => {
   e.stopPropagation();
 };
 
+
+
+
+//! Todo este codigo Sortable, funciona pero me faltaria hacer que cuando se arrastran al carrito, sumen cantidad y precio
+
+Sortable.create(cards, {   
+  group: {
+    name: "shared",
+    // pull: "clone",
+    // put: false
+  },
+  animation: 400,
+  chosenClass: "seleccionado",       
+  dragClass: "drag",
+
+  onEnd: () =>{
+
+  }
+});
+
+Sortable.create(table, {
+  group: {
+    name: "shared",
+    // put: false,
+    // pull: "clone"
+  },
+})
 
