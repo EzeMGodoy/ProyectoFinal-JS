@@ -32,7 +32,7 @@ items.addEventListener("click", (e) => {
 const fetchData = async () => {
   try {
     const res = await fetch("api.json"); //! Llamo elementos de la api
-    const data = await res.json();
+    const data = await res.json(); //! Objeto tipo RESPONSE con los datos de la respuesta con metodo .json() ya que la api es json
     pintarCards(data);
   } catch (error) {
     console.log(error);
