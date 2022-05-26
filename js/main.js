@@ -42,21 +42,17 @@ const fetchData = async () => {
 const pintarCards = (data) => {
   data.forEach((producto) => {
     templateCard.querySelector("h5").textContent = producto.title;
-    templateCard.querySelector(".description").textContent = producto.description; //!No funciona ver en api y html
+    templateCard.querySelector(".description").textContent =
+      producto.description; //!No funciona ver en api y html
     templateCard.querySelector(".precio").textContent = `$${producto.precio}`;
     templateCard.querySelector("img").setAttribute("src", producto.imgCurso);
     templateCard.querySelector(".btn-success").dataset.id = producto.id;
 
-    
     const clone = templateCard.cloneNode(true); //Tengo el clon y lo paso al fragment
     fragment.appendChild(clone);
-    
-    
   });
-  
-  cards.appendChild(fragment); // aca pinto todas las cards. Evito el reflow gracias al fragment
 
-  
+  cards.appendChild(fragment); // aca pinto todas las cards. Evito el reflow gracias al fragment
 };
 
 const addCarrito = (e) => {
@@ -68,7 +64,7 @@ const addCarrito = (e) => {
 
     Swal.fire({
       text: "Producto añadido",
-      icon: "success"
+      icon: "success",
     });
 
     setTimeout(function () {
@@ -87,7 +83,9 @@ const setCarrito = (objeto) => {
     id: objeto.querySelector(".btn-success").dataset.id,
     title: objeto.querySelector("h5").textContent,
     description: objeto.querySelector(".description").textContent,
-    precio: Number((objeto.querySelector(".precio").textContent).replace("$", "")),
+    precio: Number(
+      objeto.querySelector(".precio").textContent.replace("$", "")
+    ),
     cantidad: 1, //Si el producto no existe en el carrito, por defecto su cantidad es 1 al hacer click
   };
 
@@ -100,10 +98,7 @@ const setCarrito = (objeto) => {
   pintarCarrito();
 };
 
-
-
 const pintarCarrito = () => {
-  
   items.innerHTML = ""; //* Gracias a esto no repito la lista. Probar que pasa si lo comento o borro ;)
   Object.values(carrito).forEach((producto) => {
     //! Uso Object.values, porque al ser un objeto NO le puedo pasar metodos de arrays. Con esta propiedad si.
@@ -112,6 +107,7 @@ const pintarCarrito = () => {
     templateCarrito.querySelectorAll("td")[1].textContent = producto.cantidad;
     templateCarrito.querySelector(".btn-agregar").dataset.id = producto.id;
     templateCarrito.querySelector(".btn-borrar").dataset.id = producto.id;
+    // templateCarrito.querySelector(".btn-comprar").dataset.id = producto.id;
     templateCarrito.querySelector("span").textContent =
       producto.precio * producto.cantidad;
 
@@ -154,6 +150,17 @@ const pintarFooterCarrito = () => {
     carrito = {};
     pintarCarrito();
   });
+
+  const btnComprar = document.getElementById("comprar-carrito");
+  btnComprar.addEventListener("click", () => {
+    Swal.fire({
+      text: "Gracias por su compra",
+      icon: "success",
+    });
+    carrito = {};
+    pintarCarrito();
+    
+  });
 };
 
 const btnAccion = (e) => {
@@ -179,11 +186,7 @@ const btnAccion = (e) => {
   e.stopPropagation();
 };
 
-
-
-
 //! Todo este codigo Sortable, funciona pero me faltaria hacer que cuando se arrastran al carrito, sumen cantidad y precio
-
 
 /*
 Sortable.create(cards, {   
