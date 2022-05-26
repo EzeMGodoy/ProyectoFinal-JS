@@ -107,7 +107,6 @@ const pintarCarrito = () => {
     templateCarrito.querySelectorAll("td")[1].textContent = producto.cantidad;
     templateCarrito.querySelector(".btn-agregar").dataset.id = producto.id;
     templateCarrito.querySelector(".btn-borrar").dataset.id = producto.id;
-    // templateCarrito.querySelector(".btn-comprar").dataset.id = producto.id;
     templateCarrito.querySelector("span").textContent =
       producto.precio * producto.cantidad;
 
@@ -152,6 +151,7 @@ const pintarFooterCarrito = () => {
   });
 
   const btnComprar = document.getElementById("comprar-carrito");
+  
   btnComprar.addEventListener("click", () => {
     Swal.fire({
       text: "Gracias por su compra",
@@ -213,3 +213,6 @@ Sortable.create(table, {
 })
 
 */
+
+
+
