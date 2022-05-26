@@ -1,44 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Tienda Ser Impersonal. Selecciona los cursos que desees adquirir. Tenemos diferentes descuentos y formas de pago."
+      content="Centro de salud bioenergético orientado a terapias utulizando métodos de Radiónica - Medicina Vibracional - Liberación Emocional"
     />
-    <meta name="keywords" content="pagos, cursos, descuentos" />
-    <!-- CDN BOOTSTRAP -->
+    <meta
+      name="keywords"
+      content="capacitaciones, cursos, metodos, terapeutas"
+    />
+    <!-- LINK CDN BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-    <!-- Google Fonts -->
+    <!-- GOOGLE FONTS -->
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.webp" />
-    <!-- BOOTSTAP ICONS -->
+    <!-- BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
     />
 
-    <!-- ESTILOS SASS -->
-    <link rel="stylesheet" href="css/carrito.css" />
-    <title>Tienda - Ser Impersonal</title>
+    <!-- LINK SASS -->
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <title>Inicio - Ser Impersonal</title>
   </head>
   <body>
     <!-- ========================================= -->
     <!--               ENCABEZADO                  -->
     <!-- ========================================= -->
 
-    <div class="contenedorCapacitaciones">
+    <div class="contenedorIndex">
       <header class="sticky-top">
         <div class="text-center bg-white">
           <p class="text-dark mb-0 p-2 fs-6">Contáctanos (351) 716 0653</p>
@@ -46,7 +50,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark p-3" id="menu">
           <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">
+            <a class="navbar-brand" href="index.html">
               <span class="marca fs-4 fw-bold"> Ser Impersonal </span>
             </a>
             <button
@@ -63,26 +67,32 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="../index.html"
+                  <a
+                    class="nav-link text-light"
+                    aria-current="page"
+                    href="index.html"
                     >Inicio</a
                   >
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link text-light" href="capacitaciones.html"
+                  <a class="nav-link" href="pages/capacitaciones.html"
                     >Capacitaciones</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="blog.html">Blog</a>
+                  <a class="nav-link" href="pages/blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="pages/tienda.html">Tienda</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">Nosotros</a>
+                  <a class="nav-link" href="pages/about.html">Nosotros</a>
                 </li>
 
                 <li class="nav-item">
-                  <a class="nav-link" href="contacto.html">Contacto</a>
+                  <a class="nav-link" href="pages/contacto.html">Contacto</a>
                 </li>
               </ul>
             </div>
@@ -91,96 +101,278 @@
       </header>
 
       <!-- ========================================= -->
-      <!--               INTRO                       -->
+      <!--                 PORTADA                   -->
       <!-- ========================================= -->
 
-      <div
-        class="alert alert-success containerAlert position-sticky top-0 hide"
-        role="alert"
-      >
-        Capacitación añadida al carrito!
-      </div>
-      <div
-        class="alert alert-danger containerAlert position-sticky top-0 remove"
-        role="alert"
-      >
-        Capacitación eliminada del carrito
-      </div>
-
-      <section id="intro">
-        <hr />
-        <h1 class="tituloIntro">TIENDA</h1>
-        <p class="textoIntro">
-          Terapeutas y facilitadores en Medicina Alternativa <br />
-          <span>Ser Impersonal</span>
-        </p>
-      </section>
-
-      <!-- ========================================= -->
-      <!--               CONTENIDO                   -->
-      <!-- ========================================= -->
-
-      <div class="container">
-        <h2>Capacitaciones</h2>
-        <hr />
-        <div class="row" id="cards"></div>
-      </div>
-
-      <template id="template-card">
-        <div class="col-12 mb-2 col-md-4">
-          <div class="card">
-            <img src="" alt="" class="card-img-top"">
-            <div class="card-body">
-              <h5>Titulo</h5>
-              <!-- <p class="description">Descripcion</p> -->
-              <p>precio</p>
-              <button class="btn btn-success">Comprar</button>
+      <section class="portada">
+        <div class="banner bannerIndex">
+          <div class="wrap">
+            <div class="box">
+              <p class="textoBanner1">Ponte en contacto</p>
+              <p class="textoBanner2">
+                Nuestro grupo de trabajo está para ayudarte
+              </p>
+              <p class="textoBanner3">
+                "Dejé de sentirme al margen, cuando me incorporé al paisaje, e
+                inclusive con los que creí fueron siempre mis defectos, era
+                hermosa. Me di cuenta que no sería lo mismo sin la naturaleza
+                por eso agradecí su presencia, así como tampoco, sería lo mismo
+                sin mi."
+              </p>
             </div>
           </div>
         </div>
-      </template>
+      </section>
 
-      <template id="template-carrito">
-        <tr>
-          <th scope="row">id</th>
-          <td>Café</td>
-          <td>1</td>
-          <td>
-            <button class="btn btn-agregar btn-info btn-sm">+</button>
-            <button class="btn btn-borrar btn-danger btn-sm">-</button>
-          </td>
-          <td>$ <span>500</span></td>
-        </tr>
-      </template>
+      <!-- ========================================= -->
+      <!--               INTRO                       -->
+      <!-- ========================================= -->
 
-      <table class="table" id="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Item</th>
-            <th scope="col">Cantidad</th>
-            <th scope="col">Acción</th>
-            <th scope="col">Total</th>
-          </tr>
-        </thead>
-        <tbody id="items"></tbody>
-        <tfoot>
-          <tr id="footer">
-            <th scope="row" colspan="5">Carrito vacío</th>
-          </tr>
-        </tfoot>
-      </table>
+      <section class="zona1" id="intro">
+        <h1 class="csb">
+          Centro de Salud Bioenergético <br />
+          <span class="tecnicas">
+            Radiónica - Medicina Vibracional - Liberación Emocional</span
+          >
+        </h1>
+        <p class="terapeutas">
+          Terapeutas y facilitadores en Medicina Alternativa <br />
+          <span class="logo">Ser Impersonal</span>
+        </p>
+        <hr />
+      </section>
 
-      <template id="template-footer">
-        <th scope="row" colspan="2">Total productos</th>
-        <td>10</td>
-        <td>
-          <button class="btn btn-borrar btn-danger btn-sm" id="vaciar-carrito">
-            Vaciar todo
+      <!-- ========================================= -->
+      <!--                 CONTENIDO                 -->
+      <!-- ========================================= -->
+
+      <section class="zona2">
+        <div class="equipo">
+          <p class="equipoTitulo">
+            Equipo pequeño <br />
+            <span>Grandes Resultados</span>
+          </p>
+          <div class="equipoDescripcion">
+            <p>
+              El llamado al despertar no es lo que uno se imagina, y para
+              nosotros, acostumbrados a distraernos entre el ruido y las
+              incontables tareas diarias, escuchar ese susurro interno parecía
+              imposible.
+            </p>
+
+            <p>
+              Sin embargo, esta fuerza pura y colmada de paciencia, espera sin
+              prejuicios nuestra atención, la cual tarde o temprano iba a
+              llegar.
+            </p>
+
+            <p>
+              La nuestra al fin llegó, en lo hondo y profundo de un pozo, los
+              cuales se encuentran sabiamente ubicados en la vida para hacernos
+              entender que no debemos avanzar más en esa dirección.
+            </p>
+
+            <p>
+              Ahí en la inevitable quietud empezamos a escuchar, y de manera
+              progresiva un susurro se transformó en una voz que nos ayudó a
+              canalizar un caudal de información precisa e inagotable, tan
+              necesaria para el punto de evolución en el que nos encontrábamos.
+            </p>
+
+            <p>
+              La consciencia se expande y ya no hay marcha atrás, entendimos por
+              el dolor y el sufrimiento al que nos habíamos sometido, nos
+              abrazamos, nos aceptamos y nos amamos. Ahí entendimos que el
+              trabajo no terminaba en nosotros, que el despertar era un
+              movimiento y nosotros ya éramos parte del efecto, así descubrimos
+              nuestra vocación.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================= -->
+      <!--                 CAROUSEL                 -->
+      <!-- ========================================= -->
+
+      <section class="slider container pb-5 pt-5">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img
+                src="img/slider1.webp"
+                class="d-block w-100"
+                alt="Imagen de un bosque y rio"
+              />
+            </div>
+
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="img/slider2.webp"
+                class="d-block w-100"
+                alt="Imagen de un bosque en otoño"
+              />
+            </div>
+
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="img/slider3.webp"
+                class="d-block w-100"
+                alt="Imagen del amanecer en la montaña"
+              />
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
           </button>
-        </td>
-        <td class="font-weight-bold">$ <span>5000</span></td>
-      </template>
+
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- ========================================= -->
+      <!--           CAPACITACIONES                  -->
+      <!-- ========================================= -->
+
+      <main class="destacado">
+        <div>
+          <p class="destacadoTitulo">Publicaciones recientes</p>
+        </div>
+        <div class="capacitacionesColumna">
+          <div class="carta">
+            <a href="pages/capacitaciones.html">
+              <img
+                src="img/capacitacion1.webp"
+                alt="imagen capacitacion"
+                width="180"
+                height="160"
+                class="imagenCapacitacion"
+              />
+            </a>
+            <div class="capacitacionesTexto">
+              <p class="capacitacionesTitulo">
+                Técnica de Liberación Emocional (EFT)
+              </p>
+              <p>
+                La técnica de Liberación Emocional o EFT, conocida como TAPPING
+                es una herramienta revolucionaria de sanación. La misma
+                proporciona resultados en problemas de rendimiento, físicos y
+                emocionales<br />
+                Forma parte de<span> #PsicologiaEnergética.</span>
+              </p>
+              <div class="capacitacionesBoton">
+                <a href="pages/blog.html" class="botonSeguir">
+                  Seguir leyendo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta">
+            <a href="pages/capacitaciones.html">
+              <img
+                src="img/capacitacion2.webp"
+                alt="imagen capacitacion"
+                width="180"
+                height="160"
+                class="imagenCapacitacion"
+              />
+            </a>
+            <div class="capacitacionesTexto">
+              <p class="capacitacionesTitulo">Tú eres la Medicina</p>
+              <p class="">
+                EL REAL POTENCIAL DE TODOS <br />
+                Para percibir y sentir la realidad que nos rodea y nos integra,
+                sin distorsionarla, se necesita de energía. Sin ella
+                insensibilizamos los mensajes que nos envía nuestro cuerpo. Con
+                la energía correcta podrás sanarte a ti mismo...
+              </p>
+              <div class="capacitacionesBoton">
+                <a href="pages/blog.html" class="botonSeguir">
+                  Seguir leyendo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta">
+            <a href="pages/capacitaciones.html">
+              <img
+                src="img/capacitacion3.webp"
+                alt="imagen capacitacion"
+                width="180"
+                height="160"
+                class="imagenCapacitacion"
+              />
+            </a>
+            <div class="capacitacionesTexto">
+              <p class="capacitacionesTitulo">
+                ¿Cómo las emociones transgeneracionales limitan tu presente?
+              </p>
+              <p class="">
+                LO QUE SE HEREDA NO SE ROBA <br />
+                El mismo color de ojos de papá, la contextura física de mamá...
+                Así como heredamos aspectos físicos, no sólo de nuestros padres,
+                de igual manera se heredan las EMOCIONES de distintas ramas de
+                nuestro árbol genealógico.
+              </p>
+              <div class="capacitacionesBoton">
+                <a href="pages/blog.html" class="botonSeguir">
+                  Seguir leyendo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carta">
+            <a href="pages/capacitaciones.html">
+              <img
+                src="img/capacitacion4.webp"
+                alt="imagen capacitacion"
+                width="180"
+                height="160"
+                class="imagenCapacitacion"
+              />
+            </a>
+            <div class="capacitacionesTexto">
+              <p class="capacitacionesTitulo">
+                ¿Cómo liberar emociones atrapadas?
+              </p>
+              <p class="">
+                Cuando NO somos conscientes de nuestras emociones, las mismas
+                quedan atrapadas, almacenándose en nuestro inconsciente,
+                generalmente debido a la falta de recursos para afrontar
+                determinadas situaciones que hemos vivido de manera
+                traumática...
+              </p>
+              <div class="capacitacionesBoton">
+                <a href="pages/blog.html" class="botonSeguir">
+                  Seguir leyendo
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
 
       <!-- ========================================= -->
       <!--                 FOOTER                    -->
@@ -193,6 +385,7 @@
         <div id="iconos">
           <a href="https://www.facebook.com/" target="_blank">
             <i class="bi bi-facebook"></i>
+            <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a href="https://twitter.com/" target="_blank">
             <i class="bi bi-twitter"></i>
@@ -202,12 +395,12 @@
           </a>
         </div>
       </footer>
-    </div>
 
-  
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="js/sweetAlert.js"></script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+    </div>
   </body>
 </html>

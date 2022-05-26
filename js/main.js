@@ -7,7 +7,7 @@ const templateCarrito = document.getElementById("template-carrito").content;
 
 const tabla = document.getElementById("table");
 
-
+console.log(templateCard);
 
 const fragment = document.createDocumentFragment(); //! no genera reflow, memoria volatil, se va
 
@@ -31,7 +31,7 @@ items.addEventListener("click", (e) => {
 
 const fetchData = async () => {
   try {
-    const res = await fetch("api.json"); //! Llamo elementos de la api
+    const res = await fetch("../api.json"); //! Llamo elementos de la api
     const data = await res.json(); //! Objeto tipo RESPONSE con los datos de la respuesta con metodo .json() ya que la api es json
     pintarCards(data);
   } catch (error) {
@@ -42,11 +42,12 @@ const fetchData = async () => {
 const pintarCards = (data) => {
   data.forEach((producto) => {
     templateCard.querySelector("h5").textContent = producto.title;
-    // templateCard.querySelector(".description").textContent = producto.description; //!No funciona ver en api y html
-    templateCard.querySelector("p").textContent = producto.precio;
+    templateCard.querySelector(".description").textContent = producto.description; //!No funciona ver en api y html
+    templateCard.querySelector(".precio").textContent = `$${producto.precio}`;
     templateCard.querySelector("img").setAttribute("src", producto.imgCurso);
     templateCard.querySelector(".btn-success").dataset.id = producto.id;
 
+    
     const clone = templateCard.cloneNode(true); //Tengo el clon y lo paso al fragment
     fragment.appendChild(clone);
     
@@ -85,8 +86,8 @@ const setCarrito = (objeto) => {
   const producto = {
     id: objeto.querySelector(".btn-success").dataset.id,
     title: objeto.querySelector("h5").textContent,
-    // description: objeto.querySelector(".description").textContent,
-    precio: objeto.querySelector("p").textContent,
+    description: objeto.querySelector(".description").textContent,
+    precio: Number((objeto.querySelector(".precio").textContent).replace("$", "")),
     cantidad: 1, //Si el producto no existe en el carrito, por defecto su cantidad es 1 al hacer click
   };
 
@@ -183,6 +184,8 @@ const btnAccion = (e) => {
 
 //! Todo este codigo Sortable, funciona pero me faltaria hacer que cuando se arrastran al carrito, sumen cantidad y precio
 
+
+/*
 Sortable.create(cards, {   
   group: {
     name: "shared",
@@ -206,3 +209,4 @@ Sortable.create(table, {
   },
 })
 
+*/

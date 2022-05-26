@@ -54,12 +54,13 @@ header .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, auto);
+  grid-template-rows: repeat(6, auto);
   grid-template-areas:
     "header			       header   	         header"
     "zona1             zona1               zona1"
     "alert              alert               alert"
-    "container         container           tabla"
+    "container         container           container"
+    "tabla              tabla               tabla"
     "footer	 		       footer 		         footer";
 }
 
@@ -89,23 +90,25 @@ header .navbar .container-fluid .collapse .navbar-nav .nav-item a:hover {
   grid-area: tabla;
 }
 
+
+
 /*-- ========================================= --*/
 /*--                   ESTILOS DRAGG           --*/
 /*-- ========================================= --*/
 
-#cards{
+/* #cards{
   cursor: move;
 }
 
 #cards .seleccionado{
-  /* transform:  scale(1.02) rotate(-1deg); */
+  transform:  scale(1.02) rotate(-1deg);
   box-shadow: 0px 0px 20px rgba(149, 153, 159, .16);
   
 }
 
 #cards .drag{
   opacity: 0.5;
-}
+} */
 
 
 
@@ -137,3 +140,7 @@ footer #iconos a .bi {
 }
 
 
+
+.alturaCarrito{
+  height: 80px;
+}

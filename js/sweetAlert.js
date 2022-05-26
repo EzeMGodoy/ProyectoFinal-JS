@@ -1,14 +1,12 @@
 
-
-
 Swal.fire({
     title: "Bienvenido a la tienda!",
-    text: "Recuerda que puedes arrastrar las capacitaciones que quieras al carrito de compras.",
+    text: "Los cursos que añadas al carrito se encuentran al final de la página.",
     backdrop: true,
     timer: 6000,
     timerProgressBar: true,
-    /* toast: true,
-    position: "top-end" */   //! probar estas dos para "producto añadido"
+    toast: true,
+    position: "top-end",
 });
 
 
